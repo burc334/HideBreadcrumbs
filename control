@@ -1,0 +1,12 @@
+Package: com.burc334.hidebreadcrumbs
+Name: Hide Breadcrumbs
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Description: Hides the status-bar "Back to App" breadcrumb on iOS 18.
+Depiction: https://burc334.github.io/HideBreadcrumbs/
+Icon: https://burc334.github.io/HideBreadcrumbs/icon.png
+SileoDepiction: https://burc334.github.io/HideBreadcrumbs/depiction.json
+Maintainer: burc334
+Author: burc334
+Section: Tweaks
+Depends: ellekit, firmware (>= 18.0)

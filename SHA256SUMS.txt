@@ -1,0 +1,2 @@
+3b0877de94e08f3f4bcd6117499c0f2e37205a6f2c26c17d5ab5c3491fd1d38a  com.burc334.hidebreadcrumbs_1.0.0_iphoneos-arm64.deb
+ca4b5c4acc009fd661661f8b5dd7e7b9f1ac8083e9a5d971bde5a0213123ce71  com.burc334.hidebreadcrumbs_1.0.0_iphoneos-arm64e.deb

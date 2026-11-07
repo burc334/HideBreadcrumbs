@@ -14,7 +14,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "Hide the status-bar Back to App breadcrumb on iOS 18."
+          "markdown": "Hide the status bar \"Back to App\" breadcrumb."
         },
         {
           "class": "DepictionTableTextView",
@@ -28,13 +28,17 @@
         },
         {
           "class": "DepictionTableTextView",
-          "title": "RootHide",
-          "text": "iphoneos-arm64e \u00b7 tested on iOS 18.4.1 (Dopamine 3)"
+          "title": "roothide",
+          "text": "iphoneos-arm64e · tested on iOS 18.4.1 (Dopamine 3)"
         },
         {
           "class": "DepictionTableTextView",
-          "title": "Rootless",
-          "text": "iphoneos-arm64 \u00b7 expected on iOS 18+ rootless jailbreaks"
+          "title": "rootless",
+          "text": "iphoneos-arm64 · expected on iOS 18+ rootless jailbreaks"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "### Compatibility\n\nTested on iOS 18.4.1 (Dopamine 3, roothide). The rootless build is expected to work on iOS 18+ rootless jailbreaks. The tweak requires iOS 18.0 or later."
         },
         {
           "class": "DepictionMarkdownView",
@@ -42,24 +46,22 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "### How it works\n\niOS 18 creates the breadcrumb through `SBDeviceApplicationSceneStatusBarBreadcrumbProvider`. Hide Breadcrumbs hooks the provider's decision method and returns `NO`. That is the same decision the system makes when its native `SBNeverBreadcrumb` preference is enabled: the breadcrumb action context is never created, so the status-bar item never appears."
+          "markdown": "### How it works\n\niOS 18 creates the breadcrumb through `SBDeviceApplicationSceneStatusBarBreadcrumbProvider`. Hide Breadcrumbs hooks the provider's decision method and returns `NO`. That is the same decision the system makes when its native `SBNeverBreadcrumb` preference is enabled: the breadcrumb action context is never created, so the status bar item never appears."
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "### Install\n\n1. Download the matching deb: RootHide (`iphoneos-arm64e`) or Rootless (`iphoneos-arm64`).\n2. Install with Sileo, Zebra, or Filza.\n3. Respring."
-        },
-        {
-          "class": "DepictionMarkdownView",
-          "markdown": "### Verification\n\nSHA-256 checksums are published in `SHA256SUMS.txt` with the GitHub release. Verify the downloaded deb before installing it."
-        },
-        {
-          "class": "DepictionMarkdownView",
-          "markdown": "### Compatibility\n\nTested on iOS 18.4.1 (Dopamine 3, RootHide). The rootless build is expected to work on iOS 18+ rootless jailbreaks. The tweak requires iOS 18.0 or later."
+          "markdown": "### Verification\n\nSHA-256 checksums are published in `SHA256SUMS.txt` with the GitHub release."
         },
         {
           "class": "DepictionTableTextView",
           "title": "License",
           "text": "MIT"
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "View source on GitHub",
+          "action": "https://github.com/burc334/HideBreadcrumbs",
+          "openExternal": true
         }
       ]
     },
@@ -69,7 +71,7 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "### 1.0.0\n\n- Initial release.\n- Hides the Back to App breadcrumb in the SpringBoard status bar.\n- Leaves other status-bar indicators unchanged.\n- Rootless and RootHide packages."
+          "markdown": "### 1.0.0\n\n- Initial release.\n- Hides the Back to App breadcrumb in the SpringBoard status bar.\n- Leaves other status bar indicators unchanged.\n- rootless and roothide packages."
         }
       ]
     }

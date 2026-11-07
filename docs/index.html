@@ -1,109 +1,88 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" content="#18181B">
-  <meta name="description" content="Hide Breadcrumbs is a rootless iOS 18 jailbreak tweak that hides the status-bar Back to App breadcrumb.">
-  <meta property="og:title" content="Hide Breadcrumbs">
-  <meta property="og:description" content="Hide the status-bar Back to App breadcrumb on iOS 18.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://burc334.github.io/HideBreadcrumbs/icon.png?v=1.0.0">
-  <title>Hide Breadcrumbs</title>
-  <link rel="icon" href="icon.png?v=1.0.0">
-  <link rel="stylesheet" href="style.css">
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="light dark" name="color-scheme"/>
+<meta content="#4D7C0F" name="theme-color"/>
+<meta content='Hide the status bar "Back to App" breadcrumb.' name="description"/>
+<meta content="Hide Breadcrumbs — rootless jailbreak tweak" property="og:title"/>
+<meta content='Hide the status bar "Back to App" breadcrumb.' property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://burc334.github.io/HideBreadcrumbs/icon.png?v=1.0.0" property="og:image"/>
+<title>Hide Breadcrumbs — rootless jailbreak tweak</title>
+<link href="icon.png?v=1.0.0" rel="icon"/>
+<link href="style.css?v=5e2fbfb1" rel="stylesheet"/>
+<meta content="https://burc334.github.io/HideBreadcrumbs/" property="og:url"/></head>
 <body>
-  <main class="page">
-    <header class="hero">
-      <div class="hero-copy">
-      <p class="eyebrow">Rootless + RootHide</p>
-      <h1>Hide Breadcrumbs</h1>
-      <p class="summary">Hide the status-bar "Back to App" breadcrumb on iOS 18.</p>
-      <div class="meta">
-        <span>Version 1.0.0</span>
-        <span><code>com.burc334.hidebreadcrumbs</code></span>
-        <span>MIT</span>
-      </div>
-      </div>
-      <img class="hero-icon" src="icon.png?v=1.0.0" width="112" height="112" alt="Hide Breadcrumbs icon">
-    </header>
-
-    <section class="card">
-      <h2>Compatibility</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Build</th>
-            <th>Architecture</th>
-            <th>Compatibility</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>RootHide</td>
-            <td><code>iphoneos-arm64e</code></td>
-            <td>Tested on iOS 18.4.1 (Dopamine 3, RootHide)</td>
-          </tr>
-          <tr>
-            <td>Rootless</td>
-            <td><code>iphoneos-arm64</code></td>
-            <td>Expected to work on iOS 18+ rootless jailbreaks</td>
-          </tr>
-        </tbody>
-      </table>
-      <p class="note">The tweak requires iOS 18.0 or later. The rootless build is expected to work on iOS 18+ rootless jailbreaks.</p>
-    </section>
-
-    <section class="card">
-      <h2>What it does</h2>
-      <ul>
-        <li>Hides the "Back to App" breadcrumb in the SpringBoard status bar.</li>
-        <li>Leaves time, carrier, signal, Wi-Fi, battery, and other indicators unchanged.</li>
-        <li>Removes the breadcrumb before it is created, so there is no leftover gap.</li>
-        <li>Applies immediately after respring.</li>
-        <li>No preference pane or configuration.</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>How it works</h2>
-      <p>iOS 18 creates the breadcrumb through <code>SBDeviceApplicationSceneStatusBarBreadcrumbProvider</code>. Hide Breadcrumbs hooks the provider's decision method and returns <code>NO</code>. That is the same decision the system makes when its native <code>SBNeverBreadcrumb</code> preference is enabled: the breadcrumb action context is never created, so the status-bar item never appears.</p>
-    </section>
-
-    <section class="card">
-      <h2>Install</h2>
-      <ol>
-        <li>Download the matching deb:
-          <ul>
-            <li>RootHide: <code>com.burc334.hidebreadcrumbs_1.0.0_iphoneos-arm64e.deb</code></li>
-            <li>Rootless: <code>com.burc334.hidebreadcrumbs_1.0.0_iphoneos-arm64.deb</code></li>
-          </ul>
-        </li>
-        <li>Install with Sileo, Zebra, or Filza.</li>
-        <li>Respring.</li>
-      </ol>
-    </section>
-
-    <section class="card">
-      <h2>Verification</h2>
-      <p>SHA-256 checksums are published in <code>SHA256SUMS.txt</code> with the GitHub release. Verify the downloaded deb before installing it.</p>
-    </section>
-
-    <section class="card">
-      <h2>Support</h2>
-      <p>Open an issue on the <a href="https://github.com/burc334/HideBreadcrumbs/issues">GitHub repository</a>. Include your iOS version, jailbreak, device model, and Hide Breadcrumbs version.</p>
-    </section>
-
-    <section class="card">
-      <h2>License</h2>
-      <p>MIT</p>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>Hide Breadcrumbs · Rootless + RootHide</p>
-  </footer>
+<main class="page">
+<header class="hero">
+<div class="hero-copy">
+<p class="eyebrow">rootless + roothide</p>
+<h1>Hide Breadcrumbs</h1>
+<p class="summary">Hide the status bar "Back to App" breadcrumb.</p>
+<div class="actions"><a class="button secondary" href="https://github.com/burc334/HideBreadcrumbs">View source on GitHub</a></div><div class="meta">
+<span>Version 1.0.0</span>
+<span>MIT</span>
+</div>
+</div>
+<img alt="" class="hero-icon" height="112" src="icon.png?v=1.0.0" width="112"/>
+</header>
+<section class="card">
+<h2>Compatibility</h2>
+<table>
+<thead>
+<tr>
+<th scope="col">Build</th>
+<th scope="col">Architecture</th>
+<th scope="col">Compatibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>roothide</td>
+<td><code>iphoneos-arm64e</code></td>
+<td>Tested on iOS 18.4.1 (Dopamine 3, roothide)</td>
+</tr>
+<tr>
+<td>rootless</td>
+<td><code>iphoneos-arm64</code></td>
+<td>Expected to work on iOS 18+ rootless jailbreaks</td>
+</tr>
+</tbody>
+</table>
+<p class="note">The tweak requires iOS 18.0 or later. The rootless build is expected to work on iOS 18+ rootless jailbreaks.</p>
+</section>
+<section class="card">
+<h2>What it does</h2>
+<ul>
+<li>Hides the "Back to App" breadcrumb in the SpringBoard status bar.</li>
+<li>Leaves time, carrier, signal, Wi-Fi, battery, and other indicators unchanged.</li>
+<li>Removes the breadcrumb before it is created, so there is no leftover gap.</li>
+<li>Applies immediately after respring.</li>
+<li>No preference pane or configuration.</li>
+</ul>
+</section>
+<section class="card">
+<h2>How it works</h2>
+<p>iOS 18 creates the breadcrumb through <code>SBDeviceApplicationSceneStatusBarBreadcrumbProvider</code>. Hide Breadcrumbs hooks the provider's decision method and returns <code>NO</code>. That is the same decision the system makes when its native <code>SBNeverBreadcrumb</code> preference is enabled: the breadcrumb action context is never created, so the status bar item never appears.</p>
+</section>
+<section class="card">
+<h2>Verification</h2>
+<p>SHA-256 checksums are published in <code>SHA256SUMS.txt</code> with the GitHub release.</p>
+</section>
+<section class="card">
+<h2>Support</h2>
+<p>Open an issue on the <a href="https://github.com/burc334/HideBreadcrumbs/issues">GitHub repository</a>. Include your iOS version, jailbreak, device model, and Hide Breadcrumbs version.</p>
+</section>
+<section class="card">
+<h2>License</h2>
+<p>MIT</p>
+</section>
+</main>
+<footer class="footer">
+<p>Hide Breadcrumbs · rootless + roothide</p>
+</footer>
 </body>
 </html>
